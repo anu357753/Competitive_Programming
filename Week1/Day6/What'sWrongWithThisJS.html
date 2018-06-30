@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+
+
+<body>
+
+	<button id="btn-0">Button 1!</button>
+<button id="btn-1">Button 2!</button>
+<button id="btn-2">Button 3!</button>
+
+</body>
+
+<script type="text/javascript">
+    var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+    var buttons = document.getElementsByTagName("button");
+    for (var btnNum = 0; btnNum < buttons.length; btnNum+=1) {
+        // for each of our buttons, when the user clicks it...
+        buttons[btnNum].onclick = function() {
+            // tell her what she's won!
+            var index = Number(this.id.slice(4))
+            alert(prizes[index]);
+        };
+    }
+
+
+
+</script>
+</html>
